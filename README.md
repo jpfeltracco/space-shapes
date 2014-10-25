@@ -13,3 +13,7 @@ Space Shapes
         * Working Directory --> ... button --> core/assets
         * Use classpath of module: --> desktop
     * To test your configuration: Run --> Run 'Desktop'
+
+###Structure
+* "core/src" contains all game code ("desktop/src" deals with launching the game on desktop, not game logic).
+* "core/assets" is the dump for any assets you need in game.
