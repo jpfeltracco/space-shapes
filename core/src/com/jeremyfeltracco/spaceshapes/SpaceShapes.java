@@ -16,9 +16,11 @@ public class SpaceShapes extends Game {
 
 	@Override
 	public void render () {
+        // Clear the screen
 		Gdx.gl.glClearColor(0.5f, 0.5f, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        ui.render();
+
+        ui.render(); // Render the UI last
 	}
 
     @Override

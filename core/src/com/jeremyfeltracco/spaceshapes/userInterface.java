@@ -15,44 +15,35 @@ public class UserInterface {
     private Stage stage;
     private Table table;
     // For debug drawing
-    private ShapeRenderer shapeRenderer;
 
     public void create () {
         stage = new Stage();
         Gdx.input.setInputProcessor(stage);
-        TextureAtlas atlas = new TextureAtlas(new FileHandle("ui/uiskin.atlas"));
 
-        Skin skin = new Skin(new FileHandle("ui/uiskin.json"), atlas);
+        Skin skin = new Skin(new FileHandle("ui/uiskin.json"), new TextureAtlas(new FileHandle("ui/uiskin.atlas")));
 
         table = new Table();
         table.setFillParent(true);
 
+        stage.addActor(table);
+
         TextField text = new TextField("hey", skin, "default");
         table.add(text);
 
-        stage.addActor(table);
-
-
-
-        shapeRenderer = new ShapeRenderer();
 
         // Add widgets to the table here.
     }
 
     public void resize (int width, int height) {
-        stage.getViewport().update(width, height, true);
+        stage.getViewport().update(width, height, true); // Updates stage viewport and centers it
     }
 
     public void render () {
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         stage.act(Gdx.graphics.getDeltaTime());
         stage.draw();
-
-        table.drawDebug(shapeRenderer); // This is optional, but enables debug lines for tables.
     }
 
     public void dispose() {
         stage.dispose();
-        shapeRenderer.dispose();
     }
 }
