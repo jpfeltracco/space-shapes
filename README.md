@@ -16,4 +16,4 @@ Space Shapes
 
 ###Structure
 * "core/src" contains all game code ("desktop/src" deals with launching the game on desktop, not game logic).
-* "core/assets" is the dump for any assets you need in game.
+* "images/toPack" is the dump for any assets you need in game (not in the UI). They will be automatically packed and placed in "core/assets" for you to access in a TextureAtlas.

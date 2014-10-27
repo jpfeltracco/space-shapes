@@ -1,0 +1,13 @@
+
+packed.png
+size: 128,64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pentagon
+  rotate: false
+  xy: 2, 2
+  size: 62, 59
+  orig: 62, 59
+  offset: 0, 0
+  index: -1
